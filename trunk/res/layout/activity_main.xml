@@ -16,7 +16,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="141dp"
-        android:ems="10" android:inputType="text">
+        android:ems="10"
+        android:inputType="text"
+        android:text="@string/Usuario" >
 
         <requestFocus />
     </EditText>
@@ -29,7 +31,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="61dp"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:text="@string/Senha" />
 
     <ImageView
         android:id="@+id/imageView1"
