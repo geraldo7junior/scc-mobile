@@ -37,7 +37,7 @@ public final class R {
         public static final int btn_cab_done_focused_sccm=0x7f02000a;
         public static final int btn_cab_done_pressed_sccm=0x7f02000b;
         public static final int btn_cab_done_sccm=0x7f02000c;
-        public static final int btnentrar=0x7f02000d;
+        public static final int btn_entrar=0x7f02000d;
         public static final int cab_background_bottom_sccm=0x7f02000e;
         public static final int cab_background_top_sccm=0x7f02000f;
         public static final int consultoresico=0x7f020010;

@@ -1,7 +1,10 @@
 package br.com.sccm;
 
-import android.os.Bundle;
+import java.util.concurrent.ExecutionException;
+
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -15,59 +18,69 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		final EnterProcess startProcess = new EnterProcess(this);
 		
-		
-		final EditText usuario = (EditText) findViewById(R.id.usuario);
-		final EditText senha = (EditText) findViewById(R.id.senha);
+		final EditText etUsuario = (EditText) findViewById(R.id.usuario);
+		final EditText etSenha = (EditText) findViewById(R.id.senha);
 		Button entrar = (Button) findViewById(R.id.entrar); 
 		
-		usuario.setOnClickListener(new View.OnClickListener() {
+		etUsuario.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				
-				usuario.setText("");
+				etUsuario.setText("");
 			}
 		});
 		
-		senha.setOnClickListener(new View.OnClickListener() {
+		etSenha.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				
-				senha.setText("");
+				etSenha.setText("");
 			}
 		});
 		
 		entrar.setOnClickListener(new View.OnClickListener() {
-			
+			final EditText etUsuario = (EditText) findViewById(R.id.usuario);
+			final EditText etSenha = (EditText) findViewById(R.id.senha);
 			
 			@Override
-			public void onClick(View v) {
+			public void onClick(View v) {		
 				
+				startProcess.execute(etUsuario,etSenha);
 				
-				
-				String logincerto = "admin";
-				String senhacerta = "admin";
-				String strLogin = usuario.getText().toString();
-				String strSenha = senha.getText().toString();
-				
-				if (strLogin.equals(logincerto) && strSenha.equals(senhacerta)){
-					Toast.makeText(MainActivity.this, "Login com Sucesso!", Toast.LENGTH_SHORT).show();
-					chamaHome();
-				}else{
-					Toast.makeText(MainActivity.this, "Login e/ou Senha Incorretos!", Toast.LENGTH_SHORT).show();
-					
-				}
-				
+				try {
+					if (startProcess.get()==1){
+						Toast.makeText(MainActivity.this, "Bem vindo!", Toast.LENGTH_SHORT).show();
+						//mensagemExibir("Login","Usuário válido!");
+						chamaHome();
+					}
+					else
+						Toast.makeText(MainActivity.this, "Usuário ou senha inválidos!", Toast.LENGTH_LONG).show();
+						//mensagemExibir("Login","Usuário ou senha inválidos!");
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (ExecutionException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}				
 			}
 		});
 		
-		
-
-
-
 	}
+	
+	
+	public void mensagemExibir(String titulo,String texto){
+		AlertDialog.Builder mensagem = new AlertDialog.Builder(MainActivity.this);
+		mensagem.setTitle(titulo);
+		mensagem.setMessage(texto);
+		mensagem.setNeutralButton("Ok",null);
+		mensagem.show();
+	}
+	
 	public void chamaHome(){
 		setContentView(R.layout.home);
 	}
