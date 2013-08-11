@@ -2,11 +2,11 @@ package br.com.sccm;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-
 
 
 public class Home extends Activity {
@@ -15,6 +15,7 @@ public class Home extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home);
+		
 		
 		Button apontamentos = (Button) findViewById(R.id.btnapontamentos);
 		
@@ -26,8 +27,16 @@ public class Home extends Activity {
 				chamaApontamentos();
 			}
 		});
-		
 	}
+	
+	public void mensagemExibir(String titulo,String texto){
+		AlertDialog.Builder mensagem = new AlertDialog.Builder(Home.this);
+		mensagem.setTitle(titulo);
+		mensagem.setMessage(texto);
+		mensagem.setNeutralButton("Ok",null);
+		mensagem.show();
+	}
+	
 	public void chamaApontamentos(){
 		setContentView(R.layout.apontamentos);
 	}
