@@ -5,7 +5,7 @@
 	$password=$_POST['password'];
 	$conect = mysql_connect('localhost','root','');
 	mysql_select_db('swsdb',$conect);
-	$sql="select * from users where username='$username' and type='$password'";
+	$sql="select * from users where username='$username' and password='$password'";
 	$result = mysql_query($sql) or die ("Erro. :" . mysql_error());
 	
 	if (mysql_num_rows($result)>0){
