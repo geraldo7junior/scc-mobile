@@ -39,7 +39,7 @@ public class EnterProcess extends AsyncTask<EditText, String, Integer> {
         	String senhaCryp = cryp.Encrypt(etSenha.getText().toString(), "sha1");        	
         	
         	Log.i("logar","entrou no evento -- " + senhaCryp);
-			String urlPost = "http://192.168.1.76/android/login.php" ; //ip remoto e o login eh o arquivo que faz a verificação no BD
+			String urlPost = "http://android.swquality.com.br/login.php" ; //ip remoto e o login eh o arquivo que faz a verificação no BD
 			//String urlGet = "http://179.163.149.77/android/login.php?username="+etUsuario.getText().toString()+"&password="+etSenha.getText().toString();
 			ArrayList<NameValuePair> parametrosPost = new ArrayList<NameValuePair>();
 			parametrosPost.add(new BasicNameValuePair("username",etUsuario.getText().toString()));

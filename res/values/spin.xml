@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="projeto">
+        <item>-Projetos-</item>
+        <item>Aplic</item>
+        <item>Capital login</item>
+        <item>ESPE</item>
+        
+        
+    </string-array>
+    
+    <string-array name="atividades">
+        <item>-Atividades-</item>
+        <item>Criação de tela</item>
+        <item>Criação de botão</item>
+        <item>Tela login</item>
+        
+        
+    </string-array>
+    
+</resources>

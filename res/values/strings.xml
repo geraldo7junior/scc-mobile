@@ -21,11 +21,18 @@
     <string name="TipoHora">Tipo de hora</string>
     <string name="Tipoconsultoria">Tipo de consultoria</string>
     <string name="A">A</string>
-    <string name="B">B</string>
-    <string name="C">C</string>
-    <string name="individual">Individual</string>
-    <string name="grupo">Grupo</string>      
-    <string name="apontamentos">Apontamentos</string>
-      
+     <string name="B">B</string>
+      <string name="C">C</string>
+      <string name="individual">Individual</string>
+      <string name="grupo">Grupo</string>
+      <string name="apontamentos">Apontamentos</string>
+      <string name="titulo_apontamento">Viabilidade de custo</string>
+      <string name="HorasTrabalhadas">Horas Trabalhadas</string>
+      <string name="data_apontamento">03/08/2013</string>
+      <string name="horas_apontamento">3 horas</string>
+      <string name="Projeto">Projeto</string>
+      <string name="projeto_apontamento">Aplic</string>
+      <string name="horast">Horas Trabalhabadas</string>
+      <string name="logout">Logout</string>
 
 </resources>
