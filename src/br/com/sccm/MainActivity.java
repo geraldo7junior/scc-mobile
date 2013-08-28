@@ -4,6 +4,7 @@ import java.util.concurrent.ExecutionException;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,30 +20,13 @@ public class MainActivity extends BaseMenu {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		
 		final EnterProcess startProcess = new EnterProcess(this);
 		
-		final EditText etUsuario = (EditText) findViewById(R.id.usuario);
-		final EditText etSenha = (EditText) findViewById(R.id.senha);
+		//final EditText etUsuario = (EditText) findViewById(R.id.usuario);
+		//final EditText etSenha = (EditText) findViewById(R.id.senha);
 		Button entrar = (Button) findViewById(R.id.entrar); 
-		
-		etUsuario.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				
-				etUsuario.setText("");
-			}
-		});
-		
-		etSenha.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				
-				etSenha.setText("");
-			}
-		});
 		
 		entrar.setOnClickListener(new View.OnClickListener() {
 			final EditText etUsuario = (EditText) findViewById(R.id.usuario);

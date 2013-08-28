@@ -18,7 +18,7 @@
         android:layout_marginTop="141dp"
         android:ems="10"
         android:inputType="text"
-        android:text="@string/Usuario" >
+        android:hint="@string/Usuario" >
 
         <requestFocus />
     </EditText>
@@ -32,17 +32,7 @@
         android:layout_marginTop="61dp"
         android:ems="10"
         android:inputType="textPassword"
-        android:text="@string/Senha" />
-
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/usuario"
-        android:layout_alignRight="@+id/usuario"
-        android:layout_marginBottom="71dp"
-        android:contentDescription="@string/logo"
-        android:src="@drawable/logo" />
+        android:hint="@string/Senha" />
 
     <Button
         android:id="@+id/entrar"
@@ -52,5 +42,15 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="38dp"
         android:text="@string/Entrar" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/usuario"
+        android:layout_marginTop="67dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logo" />
 
 </RelativeLayout>

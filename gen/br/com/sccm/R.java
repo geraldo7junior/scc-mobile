@@ -70,40 +70,43 @@ public final class R {
         public static final int tab_unselected_sccm=0x7f020027;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0021;
+        public static final int LinearLayout1=0x7f0a0011;
+        public static final int action_settings=0x7f0a0024;
         public static final int apontamento_desc=0x7f0a0004;
         public static final int apontamento_titulo=0x7f0a0005;
-        public static final int btnagenda=0x7f0a001e;
-        public static final int btnapontamentos=0x7f0a0020;
-        public static final int btnconsultores=0x7f0a001f;
-        public static final int btnempresas=0x7f0a001d;
-        public static final int btnprojetos=0x7f0a001c;
-        public static final int editText1=0x7f0a0012;
-        public static final int editText2=0x7f0a0013;
-        public static final int editText3=0x7f0a0017;
-        public static final int entrar=0x7f0a0003;
-        public static final int imageView1=0x7f0a0002;
-        public static final int logout=0x7f0a0022;
-        public static final int radio0=0x7f0a0016;
-        public static final int radio1=0x7f0a0018;
-        public static final int radio2=0x7f0a0019;
-        public static final int radioButton1=0x7f0a0015;
-        public static final int radioButton2=0x7f0a0014;
-        public static final int radioGroup1=0x7f0a0011;
+        public static final int btnagenda=0x7f0a0023;
+        public static final int btnapontamentos=0x7f0a001f;
+        public static final int btnconsultores=0x7f0a0020;
+        public static final int btnempresas=0x7f0a0021;
+        public static final int btnprojetos=0x7f0a0022;
+        public static final int editdata=0x7f0a0016;
+        public static final int edithorastab=0x7f0a001e;
+        public static final int edittitulo=0x7f0a0015;
+        public static final int entrar=0x7f0a0002;
+        public static final int grupotipoconsultoria=0x7f0a001b;
+        public static final int grupotipohora=0x7f0a0017;
+        public static final int listatividades=0x7f0a0014;
+        public static final int listprojetos=0x7f0a0013;
+        public static final int logo=0x7f0a0003;
+        public static final int logout=0x7f0a0025;
+        public static final int scroll=0x7f0a0012;
         public static final int senha=0x7f0a0001;
-        public static final int spinner1=0x7f0a001b;
-        public static final int spinner2=0x7f0a001a;
-        public static final int textView1=0x7f0a0006;
         public static final int textView10=0x7f0a000f;
         public static final int textView11=0x7f0a0010;
-        public static final int textView2=0x7f0a0007;
-        public static final int textView3=0x7f0a0008;
-        public static final int textView4=0x7f0a0009;
-        public static final int textView5=0x7f0a000a;
         public static final int textView6=0x7f0a000c;
         public static final int textView7=0x7f0a000b;
         public static final int textView8=0x7f0a000e;
         public static final int textView9=0x7f0a000d;
+        public static final int tipoa=0x7f0a0018;
+        public static final int tipob=0x7f0a0019;
+        public static final int tipoc=0x7f0a001a;
+        public static final int tipoconsultoria=0x7f0a0009;
+        public static final int tipogrupo=0x7f0a001d;
+        public static final int tipoindividual=0x7f0a001c;
+        public static final int titledata=0x7f0a0007;
+        public static final int titlehorastrab=0x7f0a000a;
+        public static final int titletipohora=0x7f0a0008;
+        public static final int titletitulo=0x7f0a0006;
         public static final int usuario=0x7f0a0000;
     }
     public static final class layout {
@@ -113,7 +116,8 @@ public final class R {
         public static final int home=0x7f030003;
     }
     public static final class menu {
-        public static final int main=0x7f090000;
+        public static final int enviar=0x7f090000;
+        public static final int main=0x7f090001;
     }
     public static final class string {
         public static final int A=0x7f07000f;
