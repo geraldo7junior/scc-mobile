@@ -25,7 +25,7 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/titletitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/apontamento_titulo"
@@ -33,39 +33,39 @@
         android:text="@string/titulo_apontamento" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/titledata"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/titletitulo"
+        android:layout_below="@+id/titletitulo"
         android:layout_marginTop="20dp"
         android:text="@string/data"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/titletipohora"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/titledata"
+        android:layout_below="@+id/titledata"
         android:text="@string/data_apontamento" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/tipoconsultoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_below="@+id/textView3"
+        android:layout_alignLeft="@+id/titletipohora"
+        android:layout_below="@+id/titletipohora"
         android:layout_marginTop="20dp"
         android:text="@string/HorasTrabalhadas"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/titlehorastrab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_below="@+id/textView4"
+        android:layout_alignLeft="@+id/tipoconsultoria"
+        android:layout_below="@+id/tipoconsultoria"
         android:text="@string/horas_apontamento" />
 
     <TextView
@@ -89,8 +89,8 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView4"
-        android:layout_below="@+id/textView5"
+        android:layout_alignRight="@+id/tipoconsultoria"
+        android:layout_below="@+id/titlehorastrab"
         android:layout_marginTop="21dp"
         android:text="@string/Tipoconsultoria"
         android:textAppearance="?android:attr/textAppearanceMedium" />

@@ -6,62 +6,70 @@
     android:paddingLeft="0dp" >
 
     <ImageButton
-        android:id="@+id/btnprojetos"
+        android:id="@+id/btnapontamentos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="100dp"
-        android:contentDescription="@string/projetosico"
-        android:src="@drawable/projetosico" />
+        android:layout_alignLeft="@+id/btnconsultores"
+        android:layout_alignTop="@+id/btnempresas"
+        android:layout_margin="0dp"
+        android:layout_marginTop="22dp"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/apontamentosico"
+        android:src="@drawable/apontamentosico" />
 
     <ImageButton
         android:id="@+id/btnempresas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/btnprojetos"
         android:layout_below="@+id/btnprojetos"
-        android:src="@drawable/empresasico" android:contentDescription="@string/empresasico"/>
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="32dp"
+        android:layout_toLeftOf="@+id/btnapontamentos"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/empresasico"
+        android:src="@drawable/empresasico" />
+
+    <ImageButton
+        android:id="@+id/btnprojetos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnempresas"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="104dp"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/projetosico"
+        android:src="@drawable/projetosico" />
 
     <ImageButton
         android:id="@+id/btnagenda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnempresas"
+        android:layout_below="@+id/btnapontamentos"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/agendaico" android:contentDescription="@string/agendaico"/>
-
-    <ImageButton
-        android:id="@+id/btnconsultores"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btnprojetos"
-        android:layout_toRightOf="@+id/btnprojetos"
-        android:contentDescription="@string/consultoresico"
-        android:src="@drawable/consultoresico" />
-
-    <ImageButton
-        android:id="@+id/btnapontamentos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnagenda"
-        android:layout_margin="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginTop="0dp"
-        android:layout_toRightOf="@+id/btnempresas"
-        android:contentDescription="@string/apontamentosico"
-        android:src="@drawable/apontamentosico" />
+        android:layout_marginTop="14dp"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/agendaico"
+        android:src="@drawable/agendaico" />
 
     <ImageView
-        android:id="@+id/imageView1"
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btnconsultores"
         android:layout_alignRight="@+id/btnagenda"
         android:layout_marginBottom="20dp"
-        android:src="@drawable/logo" android:contentDescription="@string/logo"/>
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logo" />
+
+    <ImageButton
+        android:id="@+id/btnconsultores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnempresas"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="24dp"
+        android:background="#FFFFFF"
+        android:contentDescription="@string/consultoresico"
+        android:src="@drawable/consultoresico" />
 
 </RelativeLayout>

@@ -1,163 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/background1"
+    android:orientation="vertical"
     tools:context=".Apontamentos" >
 
-    <RadioGroup
-        android:id="@+id/radioGroup1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText1"
-        android:layout_below="@+id/editText2"
-        android:layout_marginTop="24dp" >
-    </RadioGroup>
-
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/radioButton1"
-        android:layout_alignBottom="@+id/radioButton1"
-        android:layout_alignLeft="@+id/radio0"
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="280dp"
+        android:layout_height="360dp"
         android:layout_marginLeft="20dp"
-        android:text="@string/grupo" />
+        android:layout_marginTop="30dp" >
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText3"
-        android:layout_alignLeft="@+id/editText3"
-        android:text="@string/horast"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|left|right"
+            android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="32dp"
-        android:ems="10"
-        android:inputType="time" />
+            <Spinner
+                android:id="@+id/listprojetos"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-    <RadioButton
-        android:id="@+id/radioButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView5"
-        android:layout_alignRight="@+id/textView3"
-        android:layout_marginBottom="17dp"
-        android:text="@string/individual" />
+            <Spinner
+                android:id="@+id/listatividades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/radioButton2"
-        android:layout_alignRight="@+id/radio0"
-        android:text="@string/Tipoconsultoria"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+            <EditText
+                android:id="@+id/edittitulo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="@string/Titulo"
+                android:inputType="text" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView4"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_marginBottom="20dp"
-        android:text="@string/TipoHora"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+            <EditText
+                android:id="@+id/editdata"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:ems="10"
+                android:hint="@string/data"
+                android:inputType="date" />
 
-    <RadioButton
-        android:id="@+id/radio1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/radio0"
-        android:layout_alignBottom="@+id/radio0"
-        android:layout_alignRight="@+id/editText2"
-        android:text="@string/B" />
+            <TextView
+                android:id="@+id/titletipohora"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/TipoHora"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <RadioButton
-        android:id="@+id/radio2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/radio1"
-        android:layout_alignBottom="@+id/radio1"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="18dp"
-        android:text="@string/C" />
+            <RadioGroup
+                android:id="@+id/grupotipohora"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
 
-    <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_marginBottom="17dp"
-        android:ems="10"
-        android:inputType="text" />
+                <RadioButton
+                    android:id="@+id/tipoa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/A" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText1"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="40dp"
-        android:text="@string/Titulo"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+                <RadioButton
+                    android:id="@+id/tipob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/B" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/editText2"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="-20dp"
-        android:text="@string/data"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+                <RadioButton
+                    android:id="@+id/tipoc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="18dp"
+                    android:layout_weight="1"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/C" />
+            </RadioGroup>
 
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView1"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="5dp" />
+            <TextView
+                android:id="@+id/tipoconsultoria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Tipoconsultoria"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/textView1"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="26dp"
-        android:layout_marginLeft="30dp" />
+            <RadioGroup
+                android:id="@+id/grupotipoconsultoria"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
 
-    <RadioButton
-        android:id="@+id/radio0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true"
-        android:checked="true"
-        android:text="@string/A" />
+                <RadioButton
+                    android:id="@+id/tipoindividual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/individual" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_centerVertical="true"
-        android:ems="10"
-        android:inputType="date" />
+                <RadioButton
+                    android:id="@+id/tipogrupo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onRadioButtonClicked"
+                    android:text="@string/grupo" />
+            </RadioGroup>
 
-</RelativeLayout>
+			<EditText
+			    android:id="@+id/edithorastab"
+			    android:layout_width="match_parent"
+			    android:layout_height="match_parent"
+			    android:ems="10"
+			    android:hint="@string/horast"
+			    android:inputType="time" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
