@@ -50,6 +50,38 @@ public class MainActivity extends BaseMenu {
 								chamaApontar();
 							}
 						});
+						ImageButton consultores = (ImageButton) findViewById(R.id.btnconsultores);		
+						consultores.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+								chamaConsultores();
+								
+							}
+						});
+						ImageButton agenda = (ImageButton) findViewById(R.id.btnagenda);		
+						agenda.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+								chamaAgenda();
+								
+							}
+						});
+						ImageButton empresas = (ImageButton) findViewById(R.id.btnempresas);		
+						empresas.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+								chamaEmpresas();
+								
+							}
+						});
+						ImageButton projetos = (ImageButton) findViewById(R.id.btnprojetos);		
+						projetos.setOnClickListener(new View.OnClickListener() {
+							@Override
+							public void onClick(View v) {
+								chamaProjetos();
+								
+							}
+						});
 					}
 					else
 						Toast.makeText(MainActivity.this, "Usuário ou senha inválidos!", Toast.LENGTH_LONG).show();
@@ -84,6 +116,30 @@ public class MainActivity extends BaseMenu {
 		entra.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 		startActivity(entra);
 	}
+	
+	public void chamaAgenda(){
+		Intent entra = new Intent(this, Agenda.class);
+		entra.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(entra);
+	}
+	
+	public void chamaConsultores(){
+		Intent entra = new Intent(this, Consultores.class);
+		entra.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(entra);
+	}
+	
+	public void chamaEmpresas(){
+		Intent entra = new Intent(this, Empresas.class);
+		entra.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(entra);
+	}
+	
+	public void chamaProjetos(){
+		Intent entra = new Intent(this, Projetos.class);
+		entra.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+		startActivity(entra);
+	}
       //banco local
 	
 		SQLiteDatabase database = null;
@@ -94,40 +150,40 @@ public class MainActivity extends BaseMenu {
 			try {
 				String name = "swsdb";
 				database = openOrCreateDatabase(name, SQLiteDatabase.CREATE_IF_NECESSARY, null);
-				mensagemExibir("Banco de dados", "Banco de dados funcionando corretamente");
+				//mensagemExibir("Banco de dados", "Banco de dados funcionando corretamente");
 			}catch (Exception error) {
-				mensagemExibir("Banco de dados", "Erro ao criar banco de dados: " +error.getMessage());
+				//mensagemExibir("Banco de dados", "Erro ao criar banco de dados: " +error.getMessage());
 			
 			}
 				
 			 try {
 				String CreateTableConsultants = Consultants.CreateTableConsultants;
 				database.execSQL(CreateTableConsultants);
-				mensagemExibir ("Banco de dados", "Tabela Consultants criada corretamente");
+				//mensagemExibir ("Banco de dados", "Tabela Consultants criada corretamente");
 			 }catch (Exception error) {
-				 mensagemExibir("Banco de dados", "Erro ao criar Tabela Consultants: " +error.getMessage());
+				// mensagemExibir("Banco de dados", "Erro ao criar Tabela Consultants: " +error.getMessage());
 					
 			 }
 			 try {
 				String CreateTablesProjects = Projects.CreateTableProjects;
 				database.execSQL(CreateTablesProjects);
-				mensagemExibir ("Banco de dados", "Tabela Projects corretamente");
+				//mensagemExibir ("Banco de dados", "Tabela Projects corretamente");
 			 }catch (Exception error) {
-				 mensagemExibir("Banco de dados", "Erro ao criar Tabela Projects: " +error.getMessage());
+				// mensagemExibir("Banco de dados", "Erro ao criar Tabela Projects: " +error.getMessage());
 			 }
 			 try {		
 				String CreateTableActivities = Activities.CreateTableActivities;
 				database.execSQL(CreateTableActivities);
-				mensagemExibir("Banco de dados", "Tabela Activities criada corretamente");
+				//mensagemExibir("Banco de dados", "Tabela Activities criada corretamente");
 			 }catch (Exception error) {
-				 mensagemExibir("Banco de dados", "Erro ao criar tabela CreateTableActivities: " +error.getMessage());
+				// mensagemExibir("Banco de dados", "Erro ao criar tabela CreateTableActivities: " +error.getMessage());
 			 }
 			 try {
 				String CreateTableProjects_consultants = Project_consultants.CreateTableProject_consultants;
 				database.execSQL(CreateTableProjects_consultants);
-				mensagemExibir("Banco de dados", "Tabela Projects_consultants criada corretamente");
+				//mensagemExibir("Banco de dados", "Tabela Projects_consultants criada corretamente");
 			 }catch (Exception error) {
-				 mensagemExibir("Banco de dados", "Erro ao criar tabela Projects_consultants: " +error.getMessage());
+				// mensagemExibir("Banco de dados", "Erro ao criar tabela Projects_consultants: " +error.getMessage());
 			 }
 			
 			 

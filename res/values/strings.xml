@@ -35,5 +35,23 @@
       <string name="horast">Horas Trabalhabadas</string>
       <string name="logout">Logout</string>
        <string name="apontar">Apontar</string>
+       
+       <string name="projeto">Projetos</string>
+       <string name="aplic">Aplic</string>
+       <string name="BankSystem">Bank System</string>
+       <string name="capella">Capella</string>
+       <string name="pitang">Pitang</string>
+       
+       <string name="empresa">Empresas</string>
+       <string name="empresa1">Microsoft</string>
+       <string name="empresa2">Extra</string>
+       <string name="empresa3">Oracle</string>
+       <string name="empresa4">Facebook</string>
+       
+       <string name="consultor">Consultores</string>
+       <string name="consultor1">Mia</string>
+       <string name="consultor2">João</string>
+       <string name="consultor3">Maria</string>
+       <string name="consultor4">José</string>
 
 </resources>
