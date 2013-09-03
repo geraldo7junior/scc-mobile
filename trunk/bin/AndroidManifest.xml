@@ -36,6 +36,57 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="br.com.sccm.Agenda"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data 
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWheNarrow"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.sccm.Consultores"
+            android:label="@string/consultor"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data 
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWheNarrow"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.sccm.Projetos"
+            android:label="@string/projeto"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data 
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWheNarrow"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="br.com.sccm.Empresas"
+            android:label="@string/empresa"
+            android:uiOptions="splitActionBarWhenNarrow" >
+            <meta-data 
+                android:name="android.support.UI_OPTIONS"
+                android:value="splitActionBarWheNarrow"/>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         
     </application>
 

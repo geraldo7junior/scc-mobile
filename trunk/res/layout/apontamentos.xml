@@ -23,35 +23,38 @@
 
             <Spinner
                 android:id="@+id/listprojetos"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
             <Spinner
                 android:id="@+id/listatividades"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
 
             <EditText
                 android:id="@+id/edittitulo"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="@string/Titulo"
                 android:inputType="text" />
 
             <EditText
                 android:id="@+id/editdata"
-                android:layout_width="match_parent"
+                android:layout_width="fill_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
                 android:ems="10"
                 android:hint="@string/data"
                 android:inputType="date" />
 
             <TextView
                 android:id="@+id/titletipohora"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="@string/TipoHora"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -66,7 +69,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:checked="true"
                     android:onClick="onRadioButtonClicked"
                     android:text="@string/A" />
 
@@ -90,8 +92,9 @@
 
             <TextView
                 android:id="@+id/tipoconsultoria"
-                android:layout_width="wrap_content"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:text="@string/Tipoconsultoria"
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -116,21 +119,28 @@
                     android:text="@string/grupo" />
             </RadioGroup>
 
-			<EditText
-			    android:id="@+id/edithorastab"
-			    android:layout_width="match_parent"
-			    android:layout_height="match_parent"
-			    android:ems="10"
-			    android:hint="@string/horast"
-			    android:inputType="time" />
+            <TextView
+                android:id="@+id/titlehorastrab"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/HorasTrabalhadas"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TimePicker
+                android:id="@+id/horastrab"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
     </ScrollView>
 
     <Button
         android:id="@+id/button1"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:text="@string/apontar" />
 
 </LinearLayout>
