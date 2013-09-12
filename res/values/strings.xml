@@ -6,52 +6,48 @@
     <string name="Entrar">Entrar</string>
     <string name="logo">Logo</string>
     <string name="Usuario">Usuário</string>
-    <string name="Senha">Senha</string>
-    
-    
+    <string name="Senha">Senha</string>    
     <string name="consultoresico">Consultores</string>
     <string name="projetosico">Projetos</string>
     <string name="empresasico">Empresas</string>
     <string name="apontamentosico">Apontamentos</string>
-    <string name="agendaico">Agenda</string>
-    
-    
+    <string name="agendaico">Agenda</string>  
     <string name="Titulo">Título</string>
     <string name="data">Data</string>
     <string name="TipoHora">Tipo de hora</string>
     <string name="Tipoconsultoria">Tipo de consultoria</string>
     <string name="A">A</string>
-     <string name="B">B</string>
-      <string name="C">C</string>
-      <string name="individual">Individual</string>
-      <string name="grupo">Grupo</string>
-      <string name="apontamentos">Apontamentos</string>
-      <string name="titulo_apontamento">Viabilidade de custo</string>
-      <string name="HorasTrabalhadas">Horas Trabalhadas</string>
-      <string name="data_apontamento">03/08/2013</string>
-      <string name="horas_apontamento">3 horas</string>
-      <string name="Projeto">Projeto</string>
-      <string name="projeto_apontamento">Aplic</string>
-      <string name="horast">Horas Trabalhabadas</string>
-      <string name="logout">Logout</string>
-       <string name="apontar">Apontar</string>
-       
-       <string name="projeto">Projetos</string>
-       <string name="aplic">Aplic</string>
-       <string name="BankSystem">Bank System</string>
-       <string name="capella">Capella</string>
-       <string name="pitang">Pitang</string>
-       
-       <string name="empresa">Empresas</string>
-       <string name="empresa1">Microsoft</string>
-       <string name="empresa2">Extra</string>
-       <string name="empresa3">Oracle</string>
-       <string name="empresa4">Facebook</string>
-       
-       <string name="consultor">Consultores</string>
-       <string name="consultor1">Mia</string>
-       <string name="consultor2">João</string>
-       <string name="consultor3">Maria</string>
-       <string name="consultor4">José</string>
+    <string name="B">B</string>
+    <string name="C">C</string>
+    <string name="individual">Individual</string>
+    <string name="grupo">Grupo</string>
+    <string name="apontamentos">Apontamentos</string>
+    <string name="titulo_apontamento">Viabilidade de custo</string>
+    <string name="HorasTrabalhadas">Horas Trabalhadas</string>
+    <string name="data_apontamento">03/08/2013</string>
+    <string name="horas_apontamento">3 horas</string>
+    <string name="Projeto">Projeto</string>
+    <string name="projeto_apontamento">Aplic</string>
+    <string name="horast">Horas Trabalhabadas</string>
+    <string name="logout">Logout</string>
+    <string name="apontar">Apontar</string>
+    <string name="projeto">Projetos</string>
+    <string name="aplic">Aplic</string>
+    <string name="BankSystem">Bank System</string>
+    <string name="capella">Capella</string>
+    <string name="pitang">Pitang</string>
+    <string name="empresa">Empresas</string>
+    <string name="empresa1">Microsoft</string>
+    <string name="empresa2">Extra</string>
+    <string name="empresa3">Oracle</string>
+    <string name="empresa4">Facebook</string>
+    <string name="consultor">Consultores</string>
+    <string name="consultor1">Mia</string>
+    <string name="consultor2">João</string>
+    <string name="consultor3">Maria</string>
+    <string name="consultor4">José</string>
+    <string name="swquality">SW Mobile</string>
+    <string name="alterar">Alterar</string>
+    
 
 </resources>
