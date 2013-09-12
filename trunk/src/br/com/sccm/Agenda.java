@@ -1,10 +1,9 @@
 package br.com.sccm;
 
-import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
-public class Agenda extends Activity {
+public class Agenda extends BaseMenu {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
