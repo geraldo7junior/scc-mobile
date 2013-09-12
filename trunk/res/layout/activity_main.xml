@@ -19,41 +19,42 @@
         android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="60dp"
         android:contentDescription="@string/logo"
         android:src="@drawable/logo" />
 
-    <EditText
-        android:id="@+id/usuario"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:hint="@string/Usuario"
-        android:inputType="text" >
+        <EditText
+            android:id="@+id/usuario"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="@string/Usuario"
+            android:inputType="text" >
 
-        <requestFocus />
-    </EditText>
+            <requestFocus />
+        </EditText>
 
-    <EditText
-        android:id="@+id/senha"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:ems="10"
-        android:hint="@string/Senha"
-        android:inputType="textPassword" />
+        <EditText
+            android:id="@+id/senha"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:ems="10"
+            android:hint="@string/Senha"
+            android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/entrar"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="@string/Entrar" />
+            <Button
+                android:id="@+id/entrar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="@string/Entrar" />
 
-</LinearLayout>
+            </LinearLayout>

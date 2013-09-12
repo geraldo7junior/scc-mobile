@@ -6,7 +6,7 @@
      android:background="@drawable/background1" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/titleProjetos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -15,7 +15,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/btnApontar"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
