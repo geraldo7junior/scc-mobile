@@ -2,6 +2,11 @@ package br.com.sccm;
 
 import java.util.concurrent.ExecutionException;
 
+import br.com.sccm.db.Activities;
+import br.com.sccm.db.Consultants;
+import br.com.sccm.db.Project_consultants;
+import br.com.sccm.db.Projects;
+
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -28,8 +33,8 @@ public class MainActivity extends BaseMenu {
 		Button entrar = (Button) findViewById(R.id.entrar); 
 		
 		entrar.setOnClickListener(new View.OnClickListener() {
-			final EditText etUsuario = (EditText) findViewById(R.id.usuario);
-			final EditText etSenha = (EditText) findViewById(R.id.senha);
+			EditText etUsuario = (EditText) findViewById(R.id.usuario);
+			EditText etSenha = (EditText) findViewById(R.id.senha);
 			
 			@Override
 			public void onClick(View v) {		

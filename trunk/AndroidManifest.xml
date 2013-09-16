@@ -62,8 +62,16 @@
 			</intent-filter>
 		</activity>
 		<activity
-		android:name="br.com.sccm.Empresas"
+		android:name="br.combr.com.sccm.Empresas"
 		android:label="@string/empresa">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+		android:name="br.com.sccm.Atividades"
+		android:label="@string/atividade">
 			<intent-filter>
 				<action android:name="android.intent.action.VIEW" />
 				<category android:name="android.intent.category.LAUNCHER" />

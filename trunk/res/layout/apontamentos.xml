@@ -22,7 +22,7 @@
             android:gravity="center|left|right"
             android:orientation="vertical" >
 
-            <Spinner
+            <!-- <Spinner
                 android:id="@+id/listprojetos"
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
@@ -31,7 +31,7 @@
             <Spinner
                 android:id="@+id/listatividades"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content" /> -->
 
             <EditText
                 android:id="@+id/edittitulo"

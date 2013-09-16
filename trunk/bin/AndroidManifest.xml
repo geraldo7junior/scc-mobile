@@ -1,93 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="br.com.sccm"
-    android:versionCode="1"
-    android:versionName="1.0" >
-
-    <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="14" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-    <application
-        android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/Theme.Sccm" >
-        <activity
-            android:name="br.com.sccm.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="br.com.sccm.Apontamentos"
-            android:label="@string/apontamentos"
-            android:uiOptions="splitActionBarWhenNarrow" >
-            <meta-data 
-                android:name="android.support.UI_OPTIONS"
-                android:value="splitActionBarWheNarrow"/>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="br.com.sccm.Agenda"
-            android:uiOptions="splitActionBarWhenNarrow" >
-            <meta-data 
-                android:name="android.support.UI_OPTIONS"
-                android:value="splitActionBarWheNarrow"/>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="br.com.sccm.Consultores"
-            android:label="@string/consultor"
-            android:uiOptions="splitActionBarWhenNarrow" >
-            <meta-data 
-                android:name="android.support.UI_OPTIONS"
-                android:value="splitActionBarWheNarrow"/>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="br.com.sccm.Projetos"
-            android:label="@string/projeto"
-            android:uiOptions="splitActionBarWhenNarrow" >
-            <meta-data 
-                android:name="android.support.UI_OPTIONS"
-                android:value="splitActionBarWheNarrow"/>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="br.com.sccm.Empresas"
-            android:label="@string/empresa"
-            android:uiOptions="splitActionBarWhenNarrow" >
-            <meta-data 
-                android:name="android.support.UI_OPTIONS"
-                android:value="splitActionBarWheNarrow"/>
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        
-    </application>
+	<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="br.com.sccm"
+	android:versionCode="1"
+	android:versionName="1.0" >
+	
+	<uses-sdk
+	android:minSdkVersion="14"
+	android:targetSdkVersion="14" />
+	<uses-permission android:name="android.permission.INTERNET"/>
+	
+	<application
+	android:allowBackup="true"
+	android:icon="@drawable/ic_launcher"
+	android:label="@string/app_name"
+	android:theme="@style/Theme.Sccm" >
+		<activity
+		android:name="br.com.sccm.MainActivity"
+		android:label="@string/app_name" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+		android:name="br.com.sccm.Home"
+		android:label="@string/app_name" >
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+		android:name="br.com.sccm.Apontamentos"
+		android:label="@string/apontamentos">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+		android:name="br.com.sccm.Agenda">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+		android:name="br.com.sccm.Consultores"
+		android:label="@string/consultor">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+		android:name="br.com.sccm.Projetos"
+		android:label="@string/projeto">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+		android:name="br.combr.com.sccm.Empresas"
+		android:label="@string/empresa">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity
+		android:name="br.com.sccm.Atividades"
+		android:label="@string/atividade">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+	
+	</application>
 
 </manifest>
