@@ -1,4 +1,4 @@
-package br.com.sccm;
+package br.com.sccm.db;
 
 public class Entries {
 	public static final String Id = "id";

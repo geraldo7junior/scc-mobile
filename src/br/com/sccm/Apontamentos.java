@@ -22,6 +22,8 @@ import android.widget.Toast;
 
 public class Apontamentos extends BaseMenu {
 	Spinner sp;
+	String radioTipoHora;
+	String horaApontada;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class Apontamentos extends BaseMenu {
 		setContentView(R.layout.apontamentos);
 		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		
-		sp=(Spinner) findViewById(R.id.listprojetos);
+/*		sp=(Spinner) findViewById(R.id.listprojetos);
 		
 		ArrayAdapter<CharSequence> ar= ArrayAdapter.createFromResource(this, R.array.projeto, android.R.layout.simple_list_item_1);
 		
@@ -41,7 +43,8 @@ public class Apontamentos extends BaseMenu {
 		ArrayAdapter<CharSequence> arr= ArrayAdapter.createFromResource(this, R.array.atividades, android.R.layout.simple_list_item_1);
 		
 		arr.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line);
-		sp.setAdapter(arr);
+		sp.setAdapter(arr);*/
+		
 		
 		//#########DATA APONTADA#########//
 		/** Capture our View elements */
@@ -89,19 +92,23 @@ public class Apontamentos extends BaseMenu {
 		//Selecionada cada botao quando clicado
     switch(view.getId()) {
      case R.id.tipoa:
-     if (checked)
+	
+		if (checked)
 					//Tipo A
-       Toast.makeText(Apontamentos.this, "Tipo A", Toast.LENGTH_SHORT).show();
+			radioTipoHora = "tipoA";
+		Toast.makeText(Apontamentos.this, radioTipoHora, Toast.LENGTH_LONG).show();
      break;
      case R.id.tipob:
      if (checked)
 					//Tipo B
-       Toast.makeText(Apontamentos.this, "Tipo B", Toast.LENGTH_SHORT).show();
+    	 radioTipoHora = "tipoB";
+       Toast.makeText(Apontamentos.this, radioTipoHora, Toast.LENGTH_SHORT).show();
      break;
      case R.id.tipoc:
      if (checked)
 					//Tipo C
-       Toast.makeText(Apontamentos.this, "Tipo C", Toast.LENGTH_SHORT).show();
+    	 radioTipoHora = "tipoC";
+       Toast.makeText(Apontamentos.this, radioTipoHora, Toast.LENGTH_SHORT).show();
      break;
    }
  }
@@ -141,6 +148,9 @@ private void updateDisplay() {
     new StringBuilder()
     .append(pad(pHour)).append(":")
     .append(pad(pMinute)));
+  //TextView horaAp = (TextView) findViewById(R.id.timeDisplay);
+  //horaApontada = horaAp.getText().toString();
+  //Toast.makeText(Apontamentos.this, horaApontada, Toast.LENGTH_LONG).show();
 }
 
 /** Add padding to numbers less than ten */

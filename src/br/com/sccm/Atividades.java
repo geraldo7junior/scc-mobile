@@ -8,7 +8,6 @@ import java.util.Map;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.MenuItem;
@@ -19,18 +18,18 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
-public class Projetos extends BaseMenu {
+public class Atividades extends BaseMenu {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.projetos);
+		setContentView(R.layout.atividades);
 		this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		
-		/*#### LISTA PROJETOS ####*/
+		/*#### LISTA ATIVIDADES ####*/
 		
 		initList();
 
-		ListView lv = (ListView) findViewById(R.id.listProjetos);
+		ListView lv = (ListView) findViewById(R.id.listAtividades);
 
 		SimpleAdapter simpleAdpt = new SimpleAdapter(this, planetsList, android.R.layout.simple_list_item_1, new String[] {"planet"}, new int[] {android.R.id.text1});
 
@@ -43,39 +42,32 @@ public class Projetos extends BaseMenu {
 					long id) {
 				// TODO Auto-generated method stub
 				//TextView clickedView = (TextView) view;
-				//Toast.makeText(Projetos.this, "Idem de ID "+id+" - Posição "+position+" na lista - De nome "+clickedView.getText(), Toast.LENGTH_SHORT).show();
+				//Toast.makeText(Atividades.this, "Idem de ID "+id+" - Posição "+position+" na lista - De nome "+clickedView.getText(), Toast.LENGTH_SHORT).show();
 				Intent novaIntent = null;
-				for (int i = 0; i<=planetsList.size(); i++) {
+				for (int i=0; i<=planetsList.size(); i++) {
 					if (position == i) {
-						novaIntent = new Intent(Projetos.this, Atividades.class);     
-		                startActivity(novaIntent);
+						novaIntent = new Intent(Atividades.this, Apontamentos.class);
+						startActivity(novaIntent);
 						break;
 					}
-					
 				}
+				
 			}
 		});
-		
-		
-		
-		
-		
-		
 		
 		// we register for the contextmneu        
 		registerForContextMenu(lv);
 		
-		/*#### LISTA PROJETOS - FIM ####*/
+		/*#### LISTA ATIVIDADES - FIM ####*/
 		
 		
 	}
 	
-	/*#### LISTA PROJETOS ####*/
+	/*#### LISTA ATIVIDADES ####*/
 	List<Map<String, String>> planetsList = new ArrayList<Map<String,String>>();
 
 	private void initList() {
-
-		planetsList.add(createPlanet("planet", "Mercury"));
+		
 		planetsList.add(createPlanet("planet", "Venus"));
 		planetsList.add(createPlanet("planet", "Mars"));
 		planetsList.add(createPlanet("planet", "Jupiter"));
@@ -85,7 +77,6 @@ public class Projetos extends BaseMenu {
 		planetsList.add(createPlanet("planet", "Saturn"));
 		planetsList.add(createPlanet("planet", "Uranus"));
 		planetsList.add(createPlanet("planet", "Neptune"));
-		Log.i("array", "Array"+planetsList);
 
 	}
 
