@@ -144,20 +144,83 @@ public class Apontamentos extends BaseMenu {
    				database.execSQL(Sql);
    		   		mensagemExibir("Banco de dados","Apontamento gravado com sucesso!");
 
-   				
-   		   	
    	  }catch (Exception error) {
    		    mensagemExibir("Erro Banco de dados",Sql);
      		mensagemExibir("Erro Banco de dados",error.getMessage());
      		
-   	  }
-    	  //testarOBjeto();
-      							
+   	  }	
+         	retornarProjeto (); 
+         	retornarAtividade ();
+         	retornarApontamento ();
+         	retornarData ();
+         	retornartipoHoras ();
+         	retornarConsultoria () ;
+         	horas ();
+  					
        	}
    			
    			});
 	
   }
+	
+
+  public void retornarProjeto () {
+	   try {
+		 mensagemExibir("Nome do Projeto",ProjetoNome);
+	}catch (Exception error) {
+		
+	}
+  }
+	
+   public void retornarAtividade () {
+	try{ 
+		mensagemExibir("Nome da atividade",AtividadeNome);
+	}
+	 catch (Exception error) {
+		
+	}
+   }
+	
+	public void retornarApontamento () {
+		try {
+		mensagemExibir("Título do apontamento",edittitulo.getText().toString());
+	} catch (Exception error) {
+		
+	}
+   }
+	
+	public void retornarData () {
+		
+	try { mensagemExibir("Data do apontamento",dataApontamento);
+	} catch (Exception error) {
+		
+	}
+   }
+	
+	public void retornartipoHoras () {
+		try { 
+		 mensagemExibir("Tipo de hora",radioTipoHora);
+		} catch (Exception error) {
+			
+		}
+	   
+	}
+	public void retornarConsultoria () {
+		try {
+		 mensagemExibir("Tipo de consultoria",radioTipoConsultoria);	
+		} catch (Exception error) {
+			
+		}
+	   }
+	
+	public void horas () {
+		try {
+		 mensagemExibir("Horas trabalhadas",Hora);	
+		} catch (Exception error) {
+			
+		}
+	   }
+	
 	public void testarOBjeto () {
 		if(TextUtils.isEmpty(ProjetoNome.trim())){  
 			 mensagemExibir("ProjetoNome", "Vazio ");
@@ -195,31 +258,7 @@ public class Apontamentos extends BaseMenu {
 				 mensagemExibir(" radioTipoConsultoria", "Nao esta vazio. Valor:"+ radioTipoConsultoria);
 			} 
 	}
- public void inicializarObjetos (){
-	 try{
-	 edittitulo = (EditText) findViewById(R.id.edittitulo);
-	 titledate = (TextView) findViewById(R.id.titledate);
-	  displayTime = (TextView) findViewById(R.id.timeDisplay);
-	   alterdate = (Button) findViewById(R.id.alterdata);
-	   titletipohora = (TextView) findViewById(R.id.titletipohora);
-	   timeDisplay = (TextView) findViewById(R.id.timeDisplay);
-	   pickTIme = (Button) findViewById(R.id.pickTime);
-	   // grupotipohora =  (RadioGroup) findViewById(R.id.grupotipohora);
-	// tipoa =  (RadioButton) findViewById(R.id.tipoa);
-	 //tipob =  (RadioButton) findViewById(R.id.tipob);
-	 //tipoc =  (RadioButton) findViewById(R.id.tipoc);
-	// grupotipoconsultoria =  (RadioGroup) findViewById(R.id.grupotipoconsultoria);
-	 //tipoindividual =  (RadioButton) findViewById(R.id.tipoindividual);
-	 //tipogrupo =  (RadioButton) findViewById(R.id.tipogrupo);
-	  mensagemExibir ("Objetos inicializados corretamento!","tudo ok ok");
-
-	 }catch (Exception error) {
-		 mensagemExibir("Banco de dados", "Erro ao salvar dados: " +error.getCause());
-		 
-	 }
-	 
-		
-	}
+ 
  
  
   public void onRadioButtonClicked(View view) {
@@ -329,8 +368,7 @@ private DatePickerDialog.OnDateSetListener mDateSetListener = new DatePickerDial
    pMes = monthOfYear;
    pAno = year;
    updateDate();
-   
-   
+      
  }
  
 };
@@ -393,10 +431,6 @@ public void mensagemExibir(String titulo,String texto){
 SQLiteDatabase database;
 
 
-
-
-
-
 public void openOrCreateDatabase () {
 	try {
 		String name = "swsdb";
@@ -440,7 +474,7 @@ public void openOrCreateDatabase () {
 	try {
 		String CreateTableEntries = Entries.CreateTableEntries;
 		// database.execSQL(CreateTableEntries);
-			mensagemExibir("Banco de dados", "Tabela Entries criada corretamente");
+			//mensagemExibir("Banco de dados", "Tabela Entries criada corretamente");
 	}catch (Exception error) {
 			mensagemExibir("Banco de dados", "Erro ao criar tabela Entries: " +error.getMessage());
 	}
