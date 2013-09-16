@@ -439,7 +439,7 @@ public void openOrCreateDatabase () {
 	}
 	try {
 		String CreateTableEntries = Entries.CreateTableEntries;
-		 database.execSQL(CreateTableEntries);
+		// database.execSQL(CreateTableEntries);
 			mensagemExibir("Banco de dados", "Tabela Entries criada corretamente");
 	}catch (Exception error) {
 			mensagemExibir("Banco de dados", "Erro ao criar tabela Entries: " +error.getMessage());
